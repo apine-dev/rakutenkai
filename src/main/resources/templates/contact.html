@@ -66,6 +66,12 @@
         $("#btn").prop("disabled", false);
       }
     });
+
+    setInterval(function(){
+      if ($("#newMessage").val().length === 0){
+        window.location.reload();
+      }
+    },10000);
   });
 
   var $scrollTable = $("#scrollTable");
